@@ -36,6 +36,6 @@ To get started with the project, follow these steps:
 3. **Set up the environment**
     Ensure you have the necessary blockchain environment configured.
 
-## Usage
+## How it works the project
 
-Details on how to run the application will be added soon. For now, explore the `contracts`, `docs`, and `tests` directories for more information.
+Please explore the `contracts`, `docs`, and `tests` directories for more information.
