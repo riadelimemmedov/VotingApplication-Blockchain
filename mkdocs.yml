@@ -1,0 +1,68 @@
+site_name: Decentralized Based Voting Application
+
+theme:
+  name: 'material'
+  custom_dir: 'docs/theme'
+  palette:
+  - media: "(prefers-color-scheme: light)"
+    scheme: default
+    primary: deep orange
+    accent: deep orange
+    toggle:
+      icon: material/lightbulb-outline
+      name: "Switch to dark mode"
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    primary: deep orange
+    accent: deep orange
+    toggle:
+      icon: material/lightbulb
+      name: "Switch to light mode"
+
+extra_css:
+  - 'extra/terminal.css'
+  - 'extra/tweaks.css'
+extra_javascript:
+  - 'extra/feedback.js'
+  - 'extra/fluff.js'
+  - 'https://samuelcolvin.github.io/mkdocs-run-code/run_code_main.js'
+
+
+markdown_extensions:
+- tables
+- def_list
+- toc:
+    permalink: true
+    title: Page contents
+- admonition
+- pymdownx.details
+- pymdownx.superfences
+- pymdownx.highlight:
+    pygments_lang_class: true
+- pymdownx.extra
+- pymdownx.snippets
+- pymdownx.emoji:
+    emoji_index: !!python/name:material.extensions.emoji.twemoji
+    emoji_generator: !!python/name:material.extensions.emoji.to_svg
+- pymdownx.tabbed:
+    alternate_style: true
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [.]
+          options:
+            members_order: source
+            separate_signature: true
+            filters: ["!^_"]
+            docstring_options:
+              ignore_init_summary: true
+            merge_init_into_class: true
+            show_signature_annotations: true
+            signature_crossrefs: true
+            extensions:
+              - docs/plugins/griffe_doclinks.py
+          import:
+            - https://docs.python.org/3/objects.inv
