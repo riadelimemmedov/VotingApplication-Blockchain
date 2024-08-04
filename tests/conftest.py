@@ -15,3 +15,11 @@ def contract(deployer, project):
     This fixture deploys the `VotingApp` contract using the `deployer` account and returns the deployed contract instance.
     """
     return deployer.deploy(project.VotingApp)
+
+
+@pytest.fixture
+def delegate_contract(deployer, project):
+    """
+    This fixture deploys the `DelegateVotingApp` contract using the `deployer` account and returns the deployed contract instance.
+    """
+    return deployer.deploy(project.DelegateVotingApp)
